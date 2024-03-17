@@ -1,0 +1,55 @@
+
+//Sum of Natural Numbers
+
+public class SumOfNumbers {
+
+    public static void main(String[] args){
+
+        Integer[] firstSum = new Integer[]{1,2,3,4,5,6,7,8,9,10};
+        System.out.println("The sum of the first 10 natural numbers (1 + 2 + 3 + ... + 10)"+"\n");
+
+        for(Integer j = 0; j <= firstSum.length -1; j++){
+
+            if(j == firstSum.length -1) {
+                System.out.println("The sum of the first sum of the elements = " + firstSum[j]);
+            }
+        }
+
+        System.out.println("\n");
+
+        Integer[] secondSum = new Integer[]{1,2,3};
+        System.out.println("The sum of the first 3 natural numbers (1 + 2 + 3)"+"\n");
+
+
+        for(Integer i = 0; i <= secondSum.length -1; i++){
+
+            if(i == secondSum.length - 1) {
+                System.out.println("The sum of the second sum for the elements = " + recursion(secondSum[i]));
+            }
+        }
+
+
+
+    }
+
+    public static Integer recursion(Integer naturalN){
+
+
+        if(naturalN < 0) {
+
+            System.out.println("Please enter a positive number ");
+            return null;
+        }
+        else {
+
+            Integer storedNumber = naturalN;
+
+            return naturalN + storedNumber;
+        }
+
+
+        }
+    }
+
+
+
